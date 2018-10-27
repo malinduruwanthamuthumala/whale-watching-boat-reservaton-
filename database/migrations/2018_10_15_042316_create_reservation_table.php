@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Boattrips extends Migration
+class CreateReservationTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,19 +13,15 @@ class Boattrips extends Migration
      */
     public function up()
     {
-        //
-        Schema::create('boattrips', function (Blueprint $table) {
-            
-            $table->increments('reservationid');
-            $table->string('boatid');
-            $table->date('start_date');
-            $table->date('end_date');
+        Schema::create('reservation', function (Blueprint $table) {
+            $table->increments('res_id');
+            $table->string('boat_id');
+            $table->date('res_date');
             $table->string('location');
-            $table->string('availableseats');
-            $table->string('reservedseats');
-            $table->string('startingtime');
+            $table->integer('available_seats');
+            $table->integer('reserved_seats');
+            $table->rememberToken();
             $table->timestamps();
-
         });
     }
 
@@ -36,6 +32,6 @@ class Boattrips extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('reservation');
     }
 }
