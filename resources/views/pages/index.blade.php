@@ -9,7 +9,7 @@
                  <h1 class="font3 custom-header text-primary fadeIn">WAVES</h1>
                  <p class="">Join with us to reserve your whale watching boat rides .surf through whale watching boats and find the most suited,compare with facilitiies and different price ranges
                  </p>
-                    <a href="/boats"><button class="btn btn-outline-info">RESERVE YOUR RIDE</button></a>
+                    <a href="/reserve"><button class="btn btn-outline-info">RESERVE YOUR RIDE</button></a>
             </div> 
         </div>
     </div>

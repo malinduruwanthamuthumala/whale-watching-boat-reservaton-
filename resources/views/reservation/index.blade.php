@@ -132,6 +132,7 @@
                             @csrf
                             <label>Select location</label>
                                 <select name="location" id="" class="form-control">
+                                    <option value="All">All</option>
                                     <option value="mirissa">mirissa</option>
                                     <option value="colombo">colombo</option>
                                     <option value="trincomalee">trincomalee</option>
