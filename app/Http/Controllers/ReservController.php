@@ -58,7 +58,7 @@ class ReservController extends Controller
                     // Add color and link on event
 	                [
 	                    'color' => '#f05050',
-	                    'url' => "/reserve2/$value->reservationid",
+	                    'url' => "/book/$value->reservationid",
 	                ]
                 );
             }
@@ -67,7 +67,5 @@ class ReservController extends Controller
         return view('reservation.index', compact('calendar'));
     }
 
-    public function startbooking($reservationid){
-        return 'sdfsdfdf';
-    }
+    
 }

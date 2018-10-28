@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use validator;
+use Calendar;
+use App\boats;
+use App\trips;
 
 class BookingController extends Controller
 {
@@ -45,7 +49,10 @@ class BookingController extends Controller
      */
     public function show($id)
     {
-        //
+       $date=trips::find($id);
+       return view('reservation.pricing');
+
+       
     }
 
     /**

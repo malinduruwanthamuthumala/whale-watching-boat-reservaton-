@@ -42,7 +42,7 @@
                 <li><i class="fa fa-arrows"></i><a href="/createboat">Add Boat</a></li>
                 <li><i class="fa fa-battery-2"></i><a href="#">View Transaction History</a></li>
                 <li class=""><i class="fa fa-bell"></i><a href="#">View Reservation History</a></li>
-                <li><i class="fa fa-bicycle"></i><a href="#">Start Ne Reservation</a></li>
+                <li><i class="fa fa-bicycle"></i><a href="/tripscreate">Start New Reservation</a></li>
                 <li><i class="fa fa-circle"></i><a href="deleteboat">Delete Boat</a></li>
                 <li><i class="fa fa-crosshairs"></i><a href="#">Change Password</a></li>
                 <li><i class="fa fa-deaf"></i><a href="#">View Payement Details</a></li>

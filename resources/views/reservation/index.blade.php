@@ -121,7 +121,31 @@
                         </div>
 
                         <div class="col-md-4">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda velit explicabo similique expedita voluptate aperiam, eum, in nam aut minima molestias debitis praesentium excepturi sapiente nulla deleniti repudiandae atque mollitia.
+                                <div class="">
+                                        @if(Session::has('success'))
+                                         <div class="alert alert-success">{{session::get('success')}}</div>
+                                        @elseif(Session::has('warning'))
+                                         <div class="alert alert-danger">{{session::get('warning')}}</div>
+                                        @endif 
+                                     </div>
+                           <form action="/changloc" method="post">
+                            @csrf
+                            <label>Select location</label>
+                                <select name="location" id="" class="form-control">
+                                    <option value="mirissa">mirissa</option>
+                                    <option value="colombo">colombo</option>
+                                    <option value="trincomalee">trincomalee</option>
+                                    
+                                </select>
+                                    <div>
+                                        <label for="">select number of seats</label>
+                                        <input type="number" name="seats" class="form-control">
+                                        {!! $errors->first('number','<p class="alert alert-danger">:message</p>')!!}
+                                    </div>
+                                  
+
+                                    <input type="submit" class="btn btn-outline-warning" value="check for available trips">
+                           </form>
                         </div>
                     </div>
                 </div>

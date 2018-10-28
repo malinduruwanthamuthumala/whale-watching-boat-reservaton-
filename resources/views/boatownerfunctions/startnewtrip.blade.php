@@ -4,7 +4,8 @@
         <div class="card">
                 <h6 class="card-header primary-color white-text">Start trips to Receive bookings</h6>
                 <div class="card-body">
-                   {!!Form::open(array('method'=>'POST','files'=>'true','action'=>'TripController@AddNewTrip'))!!}
+                  <form action="/addtrip" method="post">
+                    @csrf
                    <div class="row">
                        <div class="col-md-12">
                            @if(Session::has('success'))
@@ -21,6 +22,7 @@
                                     <select name="selectboat" id="" class="form-control">
                                     @foreach($boats as $boats)
                                 <option value="{{$boats->boatid}}">{{$boats->name}}</option>
+                            
                                     @endforeach
                                     </select>
                                     {!! $errors->first('select_boat','<p class="alert alert-danger">:message</p>')!!}
@@ -56,7 +58,7 @@
                                         <label for="">select ending date</label>
                                         <div>
                                             {!! Form::date('end_date',null,['calss'=>'form-control'])!!}
-                                            {!! $errors->first('start_date','<p class="alert alert-danger">:message</p>')!!}
+                                            {!! $errors->first('end_date','<p class="alert alert-danger">:message</p>')!!}
                                         </div>
         
                                     </div>
@@ -106,7 +108,11 @@
                                     <div class="form-group">
                                         <label for="">select location</label>
                                         <div>
-                                                {{ Form::text('location','',array_merge(['class' => 'form-control'])) }}
+                                               <select name="location" id="" class="form-control">
+                                                   <option value="mirissa">mirissa</option>
+                                                   <option value="colombo">colombo</option>
+                                                   <option value="trincomalee">trincomalee</option>
+                                               </select>
                                             {!! $errors->first('location','<p class="alert alert-danger">:message</p>')!!}
                                         </div>
         
@@ -122,7 +128,7 @@
                                 <input type="submit" class="btn btn-primary btn-md" value="ADD TRIP TO THE CALENDER">
                             </div>
                    </div>
-                   {!!Form::close()!!}
+                </form>
                 </div>
             </div>
 

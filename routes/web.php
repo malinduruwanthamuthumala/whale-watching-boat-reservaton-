@@ -36,6 +36,7 @@ Route::get('/deleteboat','BoatsController@deleteboatview');
 
 Route::post('/boatedit','BoatsController@update');
 Route::get('/tripscreate','TripController@index');
-Route::post('addtrip','TripController@AddNewTrip');
-Route::get('/reservation','ReservationController@index');
-Route::get('/reservationfirst','ReservationController@index');
+Route::post('/addtrip','TripController@AddNewTrip');
+Route::get('/reserve','ReservController@index');
+Route::post('/changloc','ReservController@selectlocation');
+Route::resource('/book','BookingController');

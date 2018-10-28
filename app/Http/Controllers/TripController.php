@@ -27,10 +27,10 @@ class TripController extends Controller
             'availableseats'=>'required',
         ]);
 
-        // if($validator->fails()){
-        //     \session::flash('warning','please fill the all required fields');
-        //     return Redirect::to('/tripscreate')->withInput()->withErrors($validator);
-
+    // if($validator->fails()){
+    //         \session::flash('warning','please fill the all required fields');
+    //         return Redirect::to('/tripscreate')->withInput()->withErrors($validator);
+    // }
             $trip=new trips;
             
             $trip->start_date=$request->input('start_date');
@@ -40,7 +40,13 @@ class TripController extends Controller
             $trip->availableseats=$request->input('availableseats');
             $trip->reservedseats='0';
             $trip->boatid=$request->input('selectboat');
+            $id=$request->input('selectboat');
+            $name = Boats::where('boatid',$id)->first();
+           
+            $trip->boatname= $name->name;
             $trip->save();
+            
+          
             
             
             \Session::flash('success','Trip added succesfully');
