@@ -33,7 +33,7 @@
         @include('include.navbar')
        
             {{-- included the error messages --}}
-        @include('include.messages')
+        {{-- @include('include.messages') --}}
         
         {{-- content of the web page --}}
         @yield('content')

@@ -38,7 +38,21 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
-     return 'hello world';
+        $this->validate($request,[
+            'first_name'=>'required',
+            'last_name'=>'required',
+            'seats'=>'required',
+            'nic'=>'required',
+            'telephone'=>'required',
+            'email'=>'required',
+        ]);
+
+        $invoice->f_name=$request->input('first_name');
+        $invoice->l_name=$request->input('last_name');
+        $invoice->name=$request->input('first_name');
+        $invoice->name=$request->input('first_name');
+        $invoice->name=$request->input('first_name');
+        $invoice->name=$request->input('first_name');
     }
 
     /**
@@ -49,8 +63,10 @@ class BookingController extends Controller
      */
     public function show($id)
     {
+       $price=300;
        $data=trips::find($id);
-       return view('reservation.pricing')->with('resid',$data);
+       return view('reservation.pricing', compact('data','price'));
+    //    return view('reservation.pricing')->with('resid',$data);
 
        
     }

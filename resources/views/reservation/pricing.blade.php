@@ -1,11 +1,19 @@
 @extends('layouts.basic')
 
 @section('content')
+<script type="text/javascript" src="../../js/jquery-3.3.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="../../js/popper.min.js"></script>
+
 
 <div class="row" style="margin-top:100px">
-	<div class="col-md-2"></div>
-	<div class="col-md-10">
-			<form action="/addtrip" method="post">
+	<div class="col-md-1">
+		<div>
+			<p id="p"></p>
+		</div>
+	</div>
+	<div class="col-md-7">
+			<form action="/invoice" method="post">
 				@csrf
 			   <div class="row">
 				   <div class="col-md-12">
@@ -22,8 +30,8 @@
 							<label for="">First Name</label>
 							<div>
 							
-								<input type="text" name="fname" class="form-control">
-								{!! $errors->first('sfname','<p class="alert alert-danger">:message</p>')!!}
+								<input type="text" name="first_name" class="form-control">
+								{!! $errors->first('first_name','<p class="alert alert-danger">:message</p>')!!}
 							</div>
 
 						</div>
@@ -53,7 +61,7 @@
 									<div>
 										
 										
-										<input type="text" name="seats" class="form-control">
+										<input type="number" name="seats" class="form-control" id="seats">
 										{!! $errors->first('seats','<p class="alert alert-danger">:message</p>')!!}
 									</div>
 								</div>
@@ -79,8 +87,8 @@
 								<div class="form-group">
 									<label for="">Telephone number</label>
 									<div>
-										  <input type="text" class="form-control" name="tp">
-										{!! $errors->first('tp','<p class="alert alert-danger">:message</p>')!!}
+										  <input type="text" class="form-control" name="telephone">
+										{!! $errors->first('telephone','<p class="alert alert-danger">:message</p>')!!}
 									</div>
 	
 								</div>
@@ -106,25 +114,14 @@
 							</div>
 						{{-- endemail --}}
 
-						{{-- email --}}
-						<div class="col-md-8">
-								<div class="form-group">
-									<label for="">email</label>
-									<div>
-										  <input type="text" class="form-control" name="email">
-										{!! $errors->first('email','<p class="alert alert-danger">:message</p>')!!}
-									</div>
-	
-								</div>
-	
-								
-							</div>
-						{{-- endemail --}}
-						{{-- hidden input fields --}}
-						<input type="hidden" value="{{$date->location}}" name="location">
-						<input type="hidden" value="{{$data->start_date}}" name="start_date">
-						<input type="hidden" value="{{$data->boatid}}" name="boat_id">
 						
+						{{-- hidden input fields --}}
+						
+						<input type="text" value="{{$data->location}}" name="location">
+						<input type="text" value="{{$data->start_date}}" name="start_date">
+						<input type="text" value="{{$data->boatid}}" name="boat_id">
+						<input type="text" value="{{$price}}" name="price">
+						<input type="text" value="{{$data->reservationid}}" name="res_id">
 
 						{{-- end hidden input fields --}}
 						<div class="col-md-6 ">
@@ -133,10 +130,51 @@
 			   </div>
 			</form>			
 	</div>
-	<div class="col-md-2"></div>
+	<div class="col-md-3">
+			<div class="card">
 
+					<!-- Card image -->
+					<img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" alt="Card image cap">
+				  
+					<!-- Card content -->
+					<div class="card-body">
+				  
+					  <!-- Title -->
+					  <h3>price you have to pay is</h3>
+					  <!-- Text -->
+					  <p class="card-text" id="price">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+					  <!-- Button -->
+					  <h3 ></h3>
+					  <a href="#" class="btn btn-primary" id="button">Button</a>
+				  
+					</div>
+				  
+				  </div>
+				  <!-- Card -->
+			
+			</div>
+			<!-- Card -->	
+	
+	
+					
+				  
+					
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#seats").focusout(function(){
+		var seats=$('#seats').val();
+		var price=seats*15;
+        $("#price").text(price);
+    });
+});
+</script>
 
 
+<!-- Bootstrap core JavaScript -->
+{{-- <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="../../js/mdb.min.js"></script> --}}
 
 @endsection
