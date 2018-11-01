@@ -38,7 +38,7 @@ class BookingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+     return 'hello world';
     }
 
     /**
@@ -49,8 +49,8 @@ class BookingController extends Controller
      */
     public function show($id)
     {
-       $date=trips::find($id);
-       return view('reservation.pricing');
+       $data=trips::find($id);
+       return view('reservation.pricing')->with('resid',$data);
 
        
     }

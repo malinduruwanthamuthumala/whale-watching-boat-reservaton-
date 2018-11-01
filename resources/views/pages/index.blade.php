@@ -1,6 +1,6 @@
 @extends('layouts.basic')
 @section('content')
-    
+   
 
 <div> 
     <div id="intro" class="view">
@@ -28,54 +28,10 @@
 </div>
 
 
-<div id="boxone">
-    <div class="container">
-        <div class="row">
-     
-                <div class="col-md-4">
-                        <div class="custom_padding">
-                            <div class=" text-center" >
-                                <img src="img/sv.png" alt="" style="height:200px;width:100% " class="">
-                                <h1 class="">Book your hotel Room</h1>
-                                <p>Save time and money on your accommodation search with millions of ... You are now online ...
-                                     Find your ideal hotel and compare prices from different websites ... 
-                                    From budget hostels to luxury suites, trivago makes it easy to book online.</p>
-                                
-                            </div>
-                        </div>    
-                   </div>    
+<div id="boxone" style="padding-top:50px;padding-bottom:50px">
+   
+    </div>          
 
-                   <div class="col-md-4">
-                        <div class="custom_padding">
-                            <div class=" text-center" >
-                                <img src="img/ffs.jpg" alt="" style="height:200px;width:100% " class="">
-                                <h1 class="">Reserve your ride</h1>
-                                <br><br>
-                                <p>Each season brings a whole different array of scenery and species 
-                                    to the marsh – it’s not just a boat ride. Call and reserve your
-                                     spot on the boat now and get ready to experience the largest mamals marsh in SRI LANKA.</p>
-                               
-                            </div>
-                        </div>    
-                   </div>    
-
-                   
-           <div class="col-md-4">
-                <div class="custom_padding">
-                    <div class="text-center" >
-                        <img src="img/dv.jpg" alt="" style="height:200px;width:100% " class="">
-                        <h1 class="">Arrange your transport</h1>
-                        <p>Reserve your transport to Hotel. Let our concierge team arrange your transportation and reach our hotel with convenience.
-                 </p>
-                        
-                    </div>
-                </div>    
-           </div>    
-
-       
-        </div>
-</div>
-</div>
 
 
 <div id="boxtwo" class="view">
@@ -118,152 +74,90 @@
 
 
 
-<div id="boxthree">
+<div id="boxthree" style="padding:50px">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
-                    <div class="custom_padding">
-                            <div class="card text-center" >
-                                    <div class="view overlay zoom">
-                                            <img src="img/e.jpeg" alt="" style="height:250px;width:100% " class="zoom">
-                                            <div class="mask flex-center waves-effect waves-light">
-                                              
-                                            </div>
-                                          </div>
-                                
-                                <h1 class="">REGISTER YOUR WHALE WATCHING BOAT</h1>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quam recusandae et 
-                                    corrupti architecto deserunt quae qui incidunt dicta? Deleniti, autem at? Corrupti cumque 
-                                    ducimus sint voluptate quos consequuntur minima!
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus reiciendis blanditiis unde, pariatur dolorem fuga odit sed hic architecto voluptas iste tempora. Explicabo sapiente consequuntur beatae praesentium at qui blanditiis?
-                                </p>
-                                <a href="/home" class="btn btn-primary">REGISTER</a>
-                                      
-                            </div>
-                        </div>    
-            </div>
-            
-            
-            <div class="col-md-6">
-                    <div class="custom_padding">
-                            <div class="card text-center" >
-                                    <div class="view overlay zoom">
-                                            <img src="img/vv.jpg" alt="" style="height:250px;width:100% " class="zoom">
-                                            <div class="mask flex-center waves-effect waves-light">
-                                              
-                                            </div>
-                                          </div>
-                                
-                                <h1 class="">REGISTER YOUR VEHICAL WITH WAVES</h1>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quam recusandae et 
-                                    corrupti architecto deserunt quae qui incidunt dicta? Deleniti, autem at? Corrupti cumque 
-                                    ducimus sint voluptate quos consequuntur minima!
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus sed repellendus velit eos modi error repellat. Adipisci beatae vero labore fuga libero dolores. Aperiam quos velit officia eum esse! Architecto?
-                                </p>
-                                <a href="/home" class="btn btn-primary">REGISTER</a>
-                                   
-                            </div>
-                        </div>    
-            </div>
-            
+            	<!--basic-->
+		
+		<div class="col s12 m4">
+		    <div class="card">
+		        <div class="card-content">
+		            <div class="card-title green white-text">
+		                <h3>Basic</h3>
+                        <h5>$20</h5>
+                        <h6>LKR 3500</h6>
+		            </div>
+		            <ul class="collection">
+		                <li class="collection-item">one person</li>
+		                <li class="collection-item">welcome drink</li>
+		                <li class="collection-item">life insuarance</li>
+		                <li class="collection-item">Live Support</li>
+		               
+		            </ul>
+		        </div>
+		        
+		        <div class="card-action">
+		            <div class="btn btn-block btn-large pink">Sing Up</div>
+		        </div>
+		    </div>
+		</div>
+		
+		<!--standard-->
+		
+		<div class="col s12 m4">
+		    <div class="card">
+		        <div class="card-content">
+		            <div class="card-title yellow darken-4 white-text">
+                        <h3>standard</h3>
+		                <h5>$35</h5>
+		                <h6>LKR 6000</h6>
+		            </div>
+		            <ul class="collection">
+		                <li class="collection-item">two persons</li>
+		                <li class="collection-item">Welcome drink</li>
+		                <li class="collection-item">life insuarence</li>
+		                <li class="collection-item">Live Support</li>
+		               
+		            </ul>
+		        </div>
+		        
+		        <div class="card-action">
+		            <div class="btn btn-block btn-large pink">Sing Up</div>
+		        </div>
+		    </div>
+		</div>
+		
+		<!--pro-->
+		
+		<div class="col s12 m4">
+		    <div class="card">
+		        <div class="card-content">
+		            <div class="card-title blue white-text">
+                        <h3>PRO</h3>
+		                <h5>$15</h5>
+		                <h6>LKR 2500 PER HEAD</h6>
+		            </div>
+		            <ul class="collection">
+		                <li class="collection-item">More than five persons</li>
+		                <li class="collection-item">welcome drink</li>
+		                <li class="collection-item">life insuarennce</li>
+		                <li class="collection-item">Live Support</li>
+		                
+		            </ul>
+		        </div>
+		        
+		        <div class="card-action">
+		            <div class="btn btn-block btn-large pink">Sing Up</div>
+		        </div>
+		    </div>
+		</div>
+		
+		
+		
+		
+	</div>
 
-        </div>
-
-        <div class="row">
-                <div class="col-md-6">
-                        <div class="custom_padding">
-                                <div class="card text-center" >
-                                    
-                                    <div class="view overlay zoom">
-                                            <img src="img/ssss.jpg" class="img-fluid " alt="zoom"  style="height:250px;width:100% ">
-                                            <div class="mask flex-center waves-effect waves-light">
-                                              
-                                            </div>
-                                          </div>
-                                    <h1 class="">REGISTER YOUR HOTELS  RESTAURENTS</h1>
-                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quam recusandae et 
-                                        corrupti architecto deserunt quae qui incidunt dicta? Deleniti, autem at? Corrupti cumque 
-                                        ducimus sint voluptate quos consequuntur minima!
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus reiciendis blanditiis unde, pariatur dolorem fuga odit sed hic architecto voluptas iste tempora. Explicabo sapiente consequuntur beatae praesentium at qui blanditiis?
-                                    </p>
-                                    <a href="/home" class="btn btn-primary">REGISTER</a>
-                                          
-                                </div>
-                            </div>    
-                </div>
-                
-                
-                <div class="col-md-6">
-                        <div class="custom_padding">
-                                <div class="card text-center" >
-                                    
-                                    <div class="view overlay zoom">
-                                            <img src="img/sss.jpg" alt="" style="height:250px;width:100% " class="zoom">
-                                            <div class="mask flex-center waves-effect waves-light">
-                                              
-                                            </div>
-                                          </div>
-                                    <h1 class="">JOIN WITH US AS A PHOTOGRAPHER</h1>
-                                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quam recusandae et 
-                                        corrupti architecto deserunt quae qui incidunt dicta? Deleniti, autem at? Corrupti cumque 
-                                        ducimus sint voluptate quos consequuntur minima!
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus sed repellendus velit eos modi error repellat. Adipisci beatae vero labore fuga libero dolores. Aperiam quos velit officia eum esse! Architecto?
-                                    </p>
-                                      <button class="btn btn-primary">REGISTER</button>
-                                       
-                                </div>
-                            </div>    
-                </div>
-                
-    
-            </div>
-
-    </div>
-</div>
-
-
-
-<div id="boxfour" class="view">
-    <div class="mask flex-center rgba-black-strong">
-       {{--  --}}
-       <div class="container">
-           <div class="row">
-               <div class="col-md-6" style="padding-top:80px">
-                    <p class="text-white">
-                            One of the best places in the world to see one of the only recorded resident blue whale 
-                            colonies in their natural habitat. Dolphins are regularly spotted on whale watching trips
-                             organized from Mirissa and Dondra head on the south coast. The BBC documentary titled “Ocean
-                              Giants” featuring the mesmeric world of Whales and Dolphins, and the scientist’s effort to shed 
-                              light on their habits and why they grow so large were filmed around Sri 
-                            Lanka and according to them 30 Blue Whales were sighted in a single day!
-                    </p>
-                    <a href="/whales" class="btn btn-outline-warning">SEE MORE DETAILS</a>
-                </div>
-               <div class="col-md-6">
-                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" style="padding-top:50px" >
-                            <div class="carousel-inner">
-                              <div class="carousel-item active">
-                                <img class="d-block w-100" src="img/bb.jpeg" alt="First slide" style="height:300px">
-                              </div>
-                              <div class="carousel-item">
-                                <img class="d-block w-100" src="img/q.jpg" alt="Second slide" style="height:300px">
-                              </div>
-                              <div class="carousel-item">
-                                <img class="d-block w-100" src="img/whale.jpg" alt="Third slide" style="height:300px">
-                              </div>
-                            </div>
-                            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                              <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                              <span class="sr-only">Next</span>
-                            </a>
-                          </div>
-               </div>
-           </div>
-       </div>
+        </div>  
        {{--  --}}
     </div>
 </div>
@@ -364,5 +258,27 @@
         .customimg{
            
         }
-        
+        <style>
+    .container {
+    margin-top: 100px;
+}
+.card-title {
+    padding: 10px;
+}
+.card-content {
+    text-align: center;
+    padding: 0px !important;
+}
+ul li {
+    padding: 20px !important;
+    font-weight: bold;
+}
+.card {
+    transition: .5s;
+}
+.card:hover {
+    transform: scale(1.05);
+    transition: .5s;
+}
+
 </style>

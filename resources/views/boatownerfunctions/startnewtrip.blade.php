@@ -76,7 +76,7 @@
                                         <div>
                                             {{-- {!! Form::text('availableseats',null,['calss'=>'form-control'])!!} --}}
                                             
-                                            {{ Form::text('availableseats','',array_merge(['class' => 'form-control'])) }}
+                                           <input type="text" class="form-control" name="availableseats">
                                             {!! $errors->first('availableseats','<p class="alert alert-danger">:message</p>')!!}
                                         </div>
         

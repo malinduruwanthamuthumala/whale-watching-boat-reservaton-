@@ -40,3 +40,4 @@ Route::post('/addtrip','TripController@AddNewTrip');
 Route::get('/reserve','ReservController@index');
 Route::post('/changloc','ReservController@selectlocation');
 Route::resource('/book','BookingController');
+Route::post('/invoice','BookingController@store');

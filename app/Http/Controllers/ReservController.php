@@ -25,7 +25,7 @@ class ReservController extends Controller
                     // Add color and link on event
 	                [
 	                    'color' => '#f05050',
-	                    'url' => '',
+	                    'url' => "/book/$value->reservationid",
 	                ]
                 );
             }
@@ -43,15 +43,15 @@ class ReservController extends Controller
         ]); 
       
         $sheets=$request->input('seats');
-      $location=$request->input('location');
+    $location=$request->input('location');
         $events = [];
-       if($location="ALL"){
+        if($location=="All"){
         $data= trips::where('availableseats','>=', $sheets)->get();
         if($data->count()) {
             foreach ($data as $key => $value) {
-                $events[] = Calendar::event(
-                    $value->boatname,
-                    true,
+               $events[] = Calendar::event(
+                   $value->boatname,
+                   true,
                     new \DateTime($value->start_date),
                     new \DateTime($value->end_date.' +1 day'),
                     null,
@@ -88,6 +88,7 @@ class ReservController extends Controller
         $calendar = Calendar::addEvents($events);
         return view('reservation.index', compact('calendar'));
     }
-}
+// }
     
+}
 }

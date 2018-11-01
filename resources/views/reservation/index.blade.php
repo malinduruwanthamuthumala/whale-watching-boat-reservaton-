@@ -106,6 +106,10 @@
     </div>
 </div>
     {{-- navigation bar ends --}}
+
+    {{--pricing  --}}
+    
+    {{-- pricing ends --}}
     {{-- calendar --}}
     <div style="margin-top:100px;margin-left:50px">
             <div class="container">
@@ -155,10 +159,32 @@
 
     {!! $calendar->script() !!}
 
-
+    
 </body>
 
-
+<style>
+    .container {
+    margin-top: 100px;
+}
+.card-title {
+    padding: 10px;
+}
+.card-content {
+    text-align: center;
+    padding: 0px !important;
+}
+ul li {
+    padding: 20px !important;
+    font-weight: bold;
+}
+.card {
+    transition: .5s;
+}
+.card:hover {
+    transform: scale(1.05);
+    transition: .5s;
+}
+</style>
 
 
 

@@ -1,127 +1,142 @@
 @extends('layouts.basic')
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- Bootstrap core CSS -->
-    <link href="../../css/bootstrap.min.css" rel="stylesheet">
-    <!-- Material Design Bootstrap -->
-    <link href="../../css/mdb.min.css" rel="stylesheet">
-    <!-- Your custom styles (optional) -->
-    <link href="../../css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Bangers|Monoton|Ultra" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Bangers|Monoton|Satisfy|Ultra" rel="stylesheet">
+
 @section('content')
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+<div class="row" style="margin-top:100px">
+	<div class="col-md-2"></div>
+	<div class="col-md-10">
+			<form action="/addtrip" method="post">
+				@csrf
+			   <div class="row">
+				   <div class="col-md-12">
+					   @if(Session::has('success'))
+						<div class="alert alert-success">{{session::get('success')}}</div>
+					   @elseif(Session::has('warning'))
+						<div class="alert alert-danger">{{session::get('warning')}}</div>
+					   @endif 
+					</div>
+					
+					<div class="col-md-4">
+						<div class="form-group">
+							{{-- first name --}}
+							<label for="">First Name</label>
+							<div>
+							
+								<input type="text" name="fname" class="form-control">
+								{!! $errors->first('sfname','<p class="alert alert-danger">:message</p>')!!}
+							</div>
 
+						</div>
 
-<div class="container">
-	<div class="row" style="margin-top:80px">
-		<!--basic-->
-		
-		<div class="col s12 m4">
-		    <div class="card">
-		        <div class="card-content">
-		            <div class="card-title green white-text">
-		                <h3>Basic</h3>
-                        <h5>$20</h5>
-                        <h6>LKR 3500</h6>
-		            </div>
-		            <ul class="collection">
-		                <li class="collection-item">one person</li>
-		                <li class="collection-item">welcome drink</li>
-		                <li class="collection-item">life insuarance</li>
-		                <li class="collection-item">Live Support</li>
-		               
-		            </ul>
-		        </div>
-		        
-		        <div class="card-action">
-		            <div class="btn btn-block btn-large pink">Sing Up</div>
-		        </div>
-		    </div>
-		</div>
-		
-		<!--standard-->
-		
-		<div class="col s12 m4">
-		    <div class="card">
-		        <div class="card-content">
-		            <div class="card-title yellow darken-4 white-text">
-                        <h3>standard</h3>
-		                <h5>$35</h5>
-		                <h6>LKR 6000</h6>
-		            </div>
-		            <ul class="collection">
-		                <li class="collection-item">two persons</li>
-		                <li class="collection-item">Welcome drink</li>
-		                <li class="collection-item">life insuarence</li>
-		                <li class="collection-item">Live Support</li>
-		               
-		            </ul>
-		        </div>
-		        
-		        <div class="card-action">
-		            <div class="btn btn-block btn-large pink">Sing Up</div>
-		        </div>
-		    </div>
-		</div>
-		
-		<!--pro-->
-		
-		<div class="col s12 m4">
-		    <div class="card">
-		        <div class="card-content">
-		            <div class="card-title blue white-text">
-                        <h3>PRO</h3>
-		                <h5>$15</h5>
-		                <h6>LKR 2500 PER HEAD</h6>
-		            </div>
-		            <ul class="collection">
-		                <li class="collection-item">More than five persons</li>
-		                <li class="collection-item">welcome drink</li>
-		                <li class="collection-item">life insuarennce</li>
-		                <li class="collection-item">Live Support</li>
-		                
-		            </ul>
-		        </div>
-		        
-		        <div class="card-action">
-		            <div class="btn btn-block btn-large pink">Sing Up</div>
-		        </div>
-		    </div>
-		</div>
-		
-		
-		
-		
+					</div>
+					{{-- end fname --}}
+					
+
+						{{-- last name --}}
+						<div class="col-md-4">
+								<div class="form-group">
+									<label for="">Last Name</label>
+									<div>
+										<input type="text" class="form-control" name="lname">
+										{!! $errors->first('lname','<p class="alert alert-danger">:message</p>')!!}
+									</div>
+	
+								</div>
+	
+							</div>
+						{{-- last name --}}
+
+						{{-- number of seats --}}
+						<div class="col-md-8">
+								<div class="form-group">
+									<label for="">number of seats</label>
+									<div>
+										
+										
+										<input type="text" name="seats" class="form-control">
+										{!! $errors->first('seats','<p class="alert alert-danger">:message</p>')!!}
+									</div>
+								</div>
+						</div>
+						{{-- end  number of seats --}}
+						
+						{{-- nic number --}}
+						<div class="col-md-8">
+								<div class="form-group">
+									<label for="">National Id Card Number</label>
+									<div>
+										<input type="text" name="nic" class="form-control">	
+										{!! $errors->first('nic','<p class="alert alert-danger">:message</p>')!!}
+									</div>
+	
+								</div>
+	
+								
+							</div>
+						{{-- end nic number --}}
+						{{-- Telephone number --}}
+						<div class="col-md-8">
+								<div class="form-group">
+									<label for="">Telephone number</label>
+									<div>
+										  <input type="text" class="form-control" name="tp">
+										{!! $errors->first('tp','<p class="alert alert-danger">:message</p>')!!}
+									</div>
+	
+								</div>
+	
+								<div>
+	
+								</div>
+							</div>
+						{{-- end telephone number --}}
+
+						{{-- email --}}
+						<div class="col-md-8">
+								<div class="form-group">
+									<label for="">email</label>
+									<div>
+										  <input type="text" class="form-control" name="email">
+										{!! $errors->first('email','<p class="alert alert-danger">:message</p>')!!}
+									</div>
+	
+								</div>
+	
+								
+							</div>
+						{{-- endemail --}}
+
+						{{-- email --}}
+						<div class="col-md-8">
+								<div class="form-group">
+									<label for="">email</label>
+									<div>
+										  <input type="text" class="form-control" name="email">
+										{!! $errors->first('email','<p class="alert alert-danger">:message</p>')!!}
+									</div>
+	
+								</div>
+	
+								
+							</div>
+						{{-- endemail --}}
+						{{-- hidden input fields --}}
+						<input type="hidden" value="{{$date->location}}" name="location">
+						<input type="hidden" value="{{$data->start_date}}" name="start_date">
+						<input type="hidden" value="{{$data->boatid}}" name="boat_id">
+						
+
+						{{-- end hidden input fields --}}
+						<div class="col-md-6 ">
+							<input type="submit" class="btn btn-primary btn-md" value="ADD TRIP TO THE CALENDER">
+						</div>
+			   </div>
+			</form>			
 	</div>
+	<div class="col-md-2"></div>
+
 </div>
+
+
+
 @endsection
-<style>
-    .container {
-    margin-top: 100px;
-}
-.card-title {
-    padding: 10px;
-}
-.card-content {
-    text-align: center;
-    padding: 0px !important;
-}
-ul li {
-    padding: 20px !important;
-    font-weight: bold;
-}
-.card {
-    transition: .5s;
-}
-.card:hover {
-    transform: scale(1.05);
-    transition: .5s;
-}
-</style>
